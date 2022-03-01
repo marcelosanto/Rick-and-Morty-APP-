@@ -6,4 +6,5 @@
     <string name="filter_button">Filter Button</string>
     <string name="characters">Characters</string>
     <string name="reset">Reset</string>
+    <string name="image_of_character">Image of character</string>
 </resources>
