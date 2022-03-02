@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black_light"
     tools:context=".FilterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/title_filter"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:padding="16dp" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_status"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_alive"
+                style="@style/ChipStyle"
+                android:text="@string/txt_alive" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_dead"
+                style="@style/ChipStyle"
+                android:text="@string/txt_dead" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_unknown"
+                style="@style/ChipStyle"
+                android:text="@string/txt_unknown" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_gender"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_marginStart="0dp"
+                style="@style/RadioButtonStyle"
+                android:background="@drawable/radiobutton_female_selector"
+                android:text="@string/txt_female" />
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                style="@style/RadioButtonStyle"
+                android:background="@drawable/radiobutton_male_selector"
+                android:text="@string/txt_male" />
+
+            <RadioButton
+                android:id="@+id/rb_genderless"
+                style="@style/RadioButtonStyle"
+                android:background="@drawable/radiobutton_genderless_selector"
+                android:text="@string/txt_genderless" />
+
+            <RadioButton
+                android:id="@+id/rb_unknown"
+                style="@style/RadioButtonStyle"
+                android:background="@drawable/radiobutton_unknown_selector"
+                android:text="@string/txt_unknown" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply_filter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_apply"
+            app:backgroundTint="@null"
+            android:background="@color/green_light"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
