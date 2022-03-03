@@ -17,5 +17,9 @@ class MainFragment : androidx.fragment.app.Fragment(R.layout.fragment_main) {
         binding.btnFilter.setOnClickListener {
             navTo(R.id.filterFragment)
         }
+
+        binding.txtCharactersTitle.setOnClickListener {
+            navTo(R.id.detailFragment)
+        }
     }
 }
