@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_RickAndMorty)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
