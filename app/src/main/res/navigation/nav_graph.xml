@@ -8,19 +8,31 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="xyz.spacermarcelo.rickandmorty.MainFragment"
-        android:label="fragment_main"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_filterFragment"
             app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/filterFragment"
         android:name="xyz.spacermarcelo.rickandmorty.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter">
         <action
             android:id="@+id/action_filterFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="xyz.spacermarcelo.rickandmorty.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

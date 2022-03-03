@@ -17,4 +17,10 @@
     <string name="txt_male">Male</string>
     <string name="txt_genderless">GenderLess</string>
     <string name="title_apply">APPLY</string>
+    <string name="txt_alive">Alive</string>
+    <string name="txt_specie">Human</string>
+    <string name="rick_sanchez">Rick Sanchez</string>
+    <string name="image_character_detail">Image character detail</string>
+    <string name="_7">7</string>
+    <string name="origin">Origin</string>
 </resources>
